@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/2.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/2.1.1/css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="src/css/misc.css" />
+	<link rel="stylesheet" href="src/css/blue-scheme.css" />-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style>
+        .goods-cate { margin-top: 20px; }
+        .cate-click { cursor: pointer; }
+        .cate-click:hover { color: #337ab7; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div id="details-div">
+        <my-header></my-header>
+        <!--<details-content></details-content>-->
+
+        <div class="container">
+            <div class="row goods-cate">
+                <div class="row xhs">
+                    <div class="col-sm-2">循环水</div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-2">阻垢分散剂</div>
+                            <div class="col-sm-2 cate-click">HDS-100</div>
+                            <div class="col-sm-2 cate-click">HDS-102</div>
+                            <div class="col-sm-2 cate-click">HDS-108</div>
+                            <div class="col-sm-2 cate-click">HDS-180</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">阻垢缓蚀剂</div>
+                            <div class="col-sm-2 cate-click">HDS-208</div>
+                            <div class="col-sm-2 cate-click">HDS-210</div>
+                            <div class="col-sm-2 cate-click">HDS-212</div>
+                            <div class="col-sm-2 cate-click">HDS-220</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">缓蚀剂</div>
+                            <div class="col-sm-2 cate-click">HDS-301</div>
+                            <div class="col-sm-2 cate-click">HDS-310</div>
+                            <div class="col-sm-2 cate-click">HDS-311</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">预膜剂</div>
+                            <div class="col-sm-2 cate-click">HDS-320</div>
+                            <div class="col-sm-2 cate-click">HDS-331</div>
+                            <div class="col-sm-2 cate-click">HDS-332</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">杀菌剂灭藻剂</div>
+                            <div class="col-sm-2 cate-click">HDS-400</div>
+                            <div class="col-sm-2 cate-click">HDS-401</div>
+                            <div class="col-sm-2 cate-click">HDS-410</div>
+                            <div class="col-sm-2 cate-click">HDS-422</div>
+                            <div class="col-sm-2 cate-click">HDS-450</div>
+                            <div class="col-sm-2 cate-click col-sm-offset-2">HDS-460</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">微生物分散剂</div>
+                            <div class="col-sm-2 cate-click">HDS-580</div>
+                            <div class="col-sm-2 cate-click">HDS-590</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row fst">
+                    <div class="col-sm-2">反渗透</div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-2">RO阻垢剂</div>
+                            <div class="col-sm-2 cate-click">HDS-718</div>
+                            <div class="col-sm-2 cate-click">HDS-728</div>
+                            <div class="col-sm-2 cate-click">HDS-760</div>
+                            <div class="col-sm-2 cate-click">HDS-780</div>
+                            <div class="col-sm-2 cate-click">HDS-790</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">RO杀菌剂</div>
+                            <div class="col-sm-2 cate-click">HDS-710</div>
+                            <div class="col-sm-2 cate-click">HDS-712</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">RO清洗剂</div>
+                            <div class="col-sm-2 cate-click">HDS-770</div>
+                            <div class="col-sm-2 cate-click">HDS-771</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">RO絮凝剂</div>
+                            <div class="col-sm-2 cate-click">HDS-700</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row fs">
+                    <div class="col-sm-2">废水</div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-2">多功能固体药剂</div>
+                            <div class="col-sm-2 cate-click">HDS-600</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">氨氮去除剂</div>
+                            <div class="col-sm-2 cate-click">HDS-601</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">脱色剂</div>
+                            <div class="col-sm-2 cate-click">HDS-602</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">COD去除剂</div>
+                            <div class="col-sm-2 cate-click">HDS-608</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">助凝剂</div>
+                            <div class="col-sm-2 cate-click">HDS-615</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">絮凝剂</div>
+                            <div class="col-sm-2 cate-click">HDS-620</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">污泥脱水剂</div>
+                            <div class="col-sm-2 cate-click">HDS-660</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">重金属捕捉剂</div>
+                            <div class="col-sm-2 cate-click">HDS-680</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row zzhxp">
+                    <div class="col-sm-2">造纸化学品</div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-2">纸浆杀菌剂</div>
+                            <div class="col-sm-2 cate-click">HDS-801</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">纸浆防腐剂</div>
+                            <div class="col-sm-2 cate-click">HDS-802</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">制浆消泡剂</div>
+                            <div class="col-sm-2 cate-click">HDS-806</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">涂料专用消泡剂</div>
+                            <div class="col-sm-2 cate-click">HDS-810</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row ktzyhxp">
+                    <div class="col-sm-2">空调专用化学品</div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-2">阻垢缓蚀剂</div>
+                            <div class="col-sm-2 cate-click">HDS-900</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">杀菌剂</div>
+                            <div class="col-sm-2 cate-click">HDS-909</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row glhc">
+                    <div class="col-sm-2">锅炉火侧</div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-2">结焦抑制剂</div>
+                            <div class="col-sm-2 cate-click">HDS-1210</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tlzyhxp">
+                    <div class="col-sm-2">脱硫专用化学品</div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-2">脱硫增效剂</div>
+                            <div class="col-sm-2 cate-click">HDS-1010</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">消泡剂</div>
+                            <div class="col-sm-2 cate-click">HDS-1012</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">重金属捕捉剂</div>
+                            <div class="col-sm-2 cate-click">HDS-1018</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row sb">
+                    <div class="col-sm-2">设备</div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-2">反渗透设备</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">自动化加药系统</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">废水处理设备</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <router-view></router-view>
+    </div>
+
+    <script src="dist/manifest.bundle.js"></script>
+    <!--<script src="dist/vue.chunk.js"></script>-->
+    <!--<script src="dist/vueRouter.chunk.js"></script>
+    <script src="dist/jquery.chunk.js"></script>
+
+    <script src="node_modules/vue/dist/vue.js"></script>-->
+    <script src="dist/vendor.chunk.js"></script>
+    <script src="dist/details.bundle.js"></script>
+    <script src="dist/bootstrap.bundle.js"></script>
+<!--
+    <script src="src/js/medigo-custom.min.js"></script>
+    <script src="src/js/plugins.min.js"></script>-->
+</body>
+</html>

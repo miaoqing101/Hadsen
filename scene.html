@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>现场图片</title>
+    <link rel="stylesheet" href="src/css/common.css" />
+    <!-- <link rel="stylesheet" href="src/css/bootstrap.min.css" /> -->
+    <style>
+        .title-img-div { height: 120px; background: url(src/images/title-image-05.jpg) repeat center center; }
+
+        .container { width: 1200px; margin: 0 auto; }
+        .container .left { float: left; width: 300px; }
+        .container .right { float: right; width: 900px; }
+
+        .container .right .title { margin-top: 45px; font-size: 24px; color: #666; text-align: center; line-height: 120px; }
+        .container .right ul { width: 586px; margin: 0 auto; font-size: 20px; color: #666; }
+        .container .right ul li { line-height: 60px; }
+
+        .gallery-line-title { margin-top: 32px; margin-left: 42px; margin-bottom: 20px; font-size: 20px; color: #666; font-weight: bold; }
+        .gallery-area { margin-left: 42px; overflow: hidden; }
+        .gallery-area .item { float: left; position: relative; margin-bottom: 30px; margin-right: 28px; width: 192px; height: 192px; border: 1px solid #eee; overflow: hidden; box-sizing: border-box; background-repeat: no-repeat; background-position: center center; background-size: cover; cursor: pointer; }
+        .gallery-area .item:nth-of-type(4n) { margin-right: 0; }
+        
+        #scene-div .right img { display: none; position: absolute; }
+/*         
+        .swiperWrap { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 10000; }
+        
+        .close { position: fixed; top: 1rem; right: 1rem; color: gold; font-size: 1rem; font-weight: bolder; z-index: 10001; }
+        
+        .swiper-container { position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; }
+        
+        .swiper-slide { display: flex; justify-content: center; align-items: center; }
+        .swiper-container img { width: auto; height: 100%; } */
+
+        .swiper-wrapper-all { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, .9); z-index: 10000; display: none; }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* background: #fff; */
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-slide img { height: 100%; max-width: 100%; }
+
+        .swiper-wrapper-all .close { position: absolute; right: 20px; top: 20px; width: 32px; height: 32px; background: url(src/images/close.png); z-index: 10002; }
+    </style>
+</head>
+
+<body>
+    <div id="scene-div">
+        <my-header></my-header>
+        <div class="title-img-div"></div>
+        <div class="container clearfix">
+            <div class="left">
+                <product-list></product-list>
+            </div>
+            <div class="right">
+
+                <p class="gallery-line-title">现场药剂1</p>                
+                <div class="gallery-area ga1">
+                    <!---->
+                </div>
+
+                <p class="gallery-line-title">现场药剂2</p>                
+                <div class="gallery-area ga2">
+                    <!---->
+                </div>
+                
+                <p class="gallery-line-title">现场药剂3</p>                
+                <div class="gallery-area ga3">
+                    <!---->
+                </div>
+                
+                <p class="gallery-line-title">现场药剂4</p>                
+                <div class="gallery-area ga4">
+                    <!---->
+                </div>
+            </div>
+        </div>
+        <my-footer></my-footer>
+
+    
+        <!-- 轮播图 -->
+        <!-- <div class="swiperWrap" style="display:none">
+            <span class="close">X</span>
+            <div class="swiper-container">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div> -->
+        
+        <!-- Swiper -->
+        <div class="swiper-wrapper-all">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="close"></div>
+        </div>
+    </div>
+    <script src="dist/manifest.bundle.js"></script>
+    <script src="dist/vendor.chunk.js"></script>
+    <script src="dist/scene.bundle.js"></script>
+    
+    <link rel="stylesheet" href="src/css/swiper.min.css">
+    <script src="src/js/swiper.min.js"></script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        function executeSwiper () {
+            var str = "";
+            var _num = 0;
+            var swiper = null;
+
+            var imgStrArray = [];
+
+            var allImages = $('.gallery-area .item img');
+            $('.gallery-area').each(function (gIndex) {
+                var groupImages = $(this).find('.item img');
+                var str = '';
+                groupImages.each(function(iIndex) {
+                    str += '<div class="swiper-slide"><img class="imgClick" src="src/images/live/' + (gIndex + 1) + '/medium/' + (iIndex + 1) + '.jpg"></div>';
+                });
+                imgStrArray.push(str);
+            })
+
+            allImages.on("click", function() {
+                var index = $(this).parents('.gallery-area').index('.gallery-area');
+
+                $(".swiperWrap").height($(window.document).height())
+                $(".swiper-wrapper").html("");
+                $(".swiper-wrapper").html(imgStrArray[index]);
+                $(".swiperWrap").show();
+                swiper = new Swiper('.swiper-container', {
+                    direction: 'horizontal',
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    initialSlide: index,
+                    setWrapperSize :true,
+                    height: window.innerHeight * .8
+                });
+                $('.swiper-container').height(window.innerHeight * .8);
+            });
+
+            $(".close").on("click", function() {
+                $(".swiperWrap").hide();
+                //  销毁swiper的实例
+                swiper.destroy(true, true);
+            })
+        }
+
+        var isBindCloseEvent = false;
+        var swiperWrapper = $('.swiper-wrapper-all');
+        function executeSwiper1 () {
+            var imgStrArray = [];
+
+            var allImages = $('.gallery-area .item img');
+            $('.gallery-area').each(function (gIndex) {
+                var groupImages = $(this).find('.item img');
+                var str = '';
+                groupImages.each(function(iIndex) {
+                    str += '<div class="swiper-slide"><img src="src/images/live/' + (gIndex + 1) + '/medium/' + (iIndex + 1) + '.jpg"></div>';
+                });
+                imgStrArray.push(str);
+            })
+
+            allImages.on("click", function() {
+                if(window.swiper) window.swiper.destroy();
+                var index = $(this).parents('.gallery-area').index('.gallery-area');
+                $(".swiper-wrapper").html("");
+                $(".swiper-wrapper").html(imgStrArray[index]);
+
+                var index = $(this).parent().index();
+                $('.swiper-wrapper-all').show();
+
+                window.swiper = new Swiper('.swiper-container', {
+                    pagination: '.swiper-pagination',
+                    paginationClickable: '.swiper-pagination',
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
+                    spaceBetween: 30,
+                    initialSlide: index
+                });
+            });
+
+            if(!isBindCloseEvent) {
+                $('.swiper-wrapper-all .close').on('click', function () {
+                    $('.swiper-wrapper-all').hide();
+                })
+                isBindCloseEvent = true;
+            }
+        }
+    </script>
+    
+    <!-- <script src="dist/bootstrap.bundle.js"></script> -->
+</body>
+
+</html>

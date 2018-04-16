@@ -1,0 +1,14 @@
+body { min-width: 1200px; margin: 0; font-family: "微软雅黑"; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { text-decoration: none; }
+p { margin: 0; }
+
+.clearfix::after { display: block; content: " "; clear: both; line-height: 0; visibility: hidden; }
+
+
+
+@media screen and (max-width: 1200px) {
+    .container { width: auto !important; }
+    /* .container > .right { width: auto !important; } */
+    /* .product-sort { display: none; } */
+}

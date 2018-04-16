@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" />-->
+    <style>
+        body { margin: 0; }
+        .slide-div { display: none; }
+    </style>
+</head>
+
+<body>
+    <div class="slide-div">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <div class="container-fluid aa">
+        <div class="row-fluid">
+            <div class="span4">4</div>
+            <div class="span8">8</div>
+        </div>
+    </div>
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">col4</div>
+            <div class="col-md-8">col8</div>
+        </div>
+    </div>
+    <br />
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-4">col4</div>
+            <div class="col-md-8">col8</div>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        var numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
+        function randomColor() {
+            var i = 0;
+            var r = '';
+            while (i < 6) {
+                r += numList[Math.floor(Math.random() * 15)].toString();
+                i++;
+            }
+            return '#' + r;
+        }
+        $('div').each(function () {
+            $(this).css('background', randomColor())
+        })
+
+        $('.aa').click(function(){
+            $('.slide-div').slideToggle();
+        })
+
+    </script>
+</body>
+
+</html>

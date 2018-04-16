@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="src/css/common.css" />
+    <!-- <link rel="stylesheet" href="src/css/bootstrap.min.css" /> -->
+    <style>
+        .title-img-div { height: 120px; background: url(src/images/title-image-05.jpg) repeat center center; }
+
+        .container { width: 1200px; margin: 0 auto; }
+        .container .left { float: left; width: 300px; }
+        .container .right { float: right; width: 900px; }
+
+        .container .right .title { margin-top: 45px; font-size: 24px; color: #666; text-align: center; line-height: 120px; }
+        .container .right ul { width: 586px; margin: 0 auto; font-size: 20px; color: #666; }
+        .container .right ul li { line-height: 60px; }
+    </style>
+</head>
+
+<body>
+    <div id="company-div">
+        <my-header></my-header>
+        <div class="title-img-div"></div>
+        <div class="container clearfix">
+            <div class="left">
+                <product-list></product-list>
+            </div>
+            <div class="right">
+                <p class="title">联系我们</p>
+                <ul>
+                    <li>公司地址：北京市朝阳区立汤路188号北方明珠大厦3号楼1112室</li>
+                    <li>联系人：赵经理</li>
+                    <li>手机：13910409155</li>
+                    <li>电话：010-58608615</li>
+                    <li>邮箱：zfbeijing1818@126.com</li>
+                </ul>
+            </div>
+        </div>
+        <my-footer></my-footer>
+    </div>
+    <script src="dist/manifest.bundle.js"></script>
+    <script src="dist/vendor.chunk.js"></script>
+    <script src="dist/company.bundle.js"></script>
+    <!-- <script src="dist/bootstrap.bundle.js"></script> -->
+</body>
+
+</html>

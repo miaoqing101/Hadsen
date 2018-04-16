@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hadsen</title>
+    <link rel="stylesheet" href="src/css/common.css" />
+
+    <style>
+        body { background: #eee; }
+        .service-section, .first-widget { margin-top: 0; }
+        #homeIntro { background-image: url(src/images/index_bg01.jpg); background-position: center bottom; background-size: auto auto; }
+
+        #home-intro { position: relative; height: 450px; line-height: 450px; font-size: 0;  background: url(src/images/index_bg02.jpg) no-repeat center center; }
+        
+        #home-intro .layer { height: 100%; background: rgba(0, 0, 0, .5); text-align: center; }
+        #home-intro .layer p { font-size: 54px; vertical-align: middle; color: #fff; }
+
+        #index-content { width: 1200px; margin: 0 auto 52px auto; }
+        #index-content .application-title { margin-top: 6px; line-height: 2.6; font-size: 24px; color: #666; }
+        #index-content ul { background: #fff; }
+        
+        #index-content li { float: left; width: 299px; height: 224px; line-height: 344px; text-align: center; border-right: 1px solid #eee; background-position: center center; background-repeat: no-repeat; position: relative; overflow: hidden; }
+        #index-content li:hover { box-shadow: 0 0 10px #ccc; z-index: 1; }
+        #index-content ul.first { border-bottom: 1px solid #eee; }
+        #index-content li:last-child { border: 0; }
+        li.elec { background-image: url(src/images/1.jpg); }
+        li.iron { background-image: url(src/images/2.jpg); }
+        li.oil { background-image: url(src/images/3.jpg); }
+        li.car { background-image: url(src/images/4.jpg); }
+        li.paper { background-image: url(src/images/5.jpg); }
+        li.pure-water { background-image: url(src/images/6.jpg); }
+        li.center-air-con { background-image: url(src/images/7.jpg); }
+        li.indus { background-image: url(src/images/8.jpg); }
+
+        #index-content li p { font-size: 18px; vertical-align: middle; }
+    </style>
+</head>
+<body>
+    <div id="h-index">
+        <my-header></my-header>
+
+        <div id="home-intro">
+            <div class="layer">
+                <p>技术为根，诚信为本</p>
+            </div>
+        </div>
+
+        <div id="index-content">
+            <p class="application-title">应用领域</p>
+            <ul class="first clearfix">
+                <li class="elec">
+                    <p>电力工业</p>
+                </li>
+                <li class="iron">
+                    <p>钢铁工业</p>
+                </li>
+                <li class="oil">
+                    <p>石油、化工工业</p>
+                </li>
+                <li class="car">
+                    <p>汽车工业</p>
+                </li>
+            </ul>
+            <ul class="clearfix">
+                <li class="paper">
+                    <p>造纸工业</p>
+                </li>
+                <li class="pure-water">
+                    <p>纯水系统</p>
+                </li>
+                <li class="center-air-con">
+                    <p>中央空调系统</p>
+                </li>
+                <li class="indus">
+                    <p>工业污水</p>
+                </li>
+            </ul>
+        </div>
+
+        <my-footer></my-footer>
+    </div>
+
+    <script src="dist/manifest.bundle.js"></script>
+    <script src="dist/vendor.chunk.js"></script>
+    <script src="dist/index.bundle.js"></script>
+    <script src="src/js/jquery-migrate-1.2.1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>应用领域</title>
+    <link rel="stylesheet" href="src/css/common.css" />
+    <style>
+        .title-img-div { height: 120px; background: url(src/images/title-image-04.jpg) repeat center center; }
+        .pageTitle { height: 150px; background: url(src/images/index_bg01.jpg) no-repeat center center; line-height: 150px; position: relative; }
+        .pageTitle .shadow { position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, .3); }
+        .pageTitle .title { font-size: 16px; color: #fff; font-weight: bold; position: relative; z-index: 1; }
+
+        #applications-div > .container { width: 1200px; margin: 0 auto; }
+        #applications-div > .container > .left { float: left; width: 300px; }
+        #applications-div > .container > .right { float: right; width: 860px; }
+
+        .content-title { line-height: 80px; font-size: 20px; color: #666; font-weight: bold; }
+
+        .content-item { margin-bottom: 20px; position: relative; overflow: hidden; width: 860px; }
+        .content-item .left { position: absolute; width: 306px; height: 100%; background-repeat: no-repeat; background-position: center center; background-size: 120% auto; }
+        .content-item .right { padding: 16px 14px 16px 36px; float: right; width: 504px; background: #f4f4f4; overflow: hidden; font-size: 14px; }
+        .content-item .right li span { color: #666; }
+        .content-item .right li em { font-style: normal; margin: 0 1em; color: #666; }
+        .content-item .right li .c-d-title { line-height: 32px; color: #0084ff; display: inline-block; width: 156px; }
+
+        .content-item .layer { width: 100%; height: 100%; background: rgba(0, 0, 0, .2); display: flex; justify-content: center; align-items: center; }
+        .content-item .layer p { font-size: 24px; color: #fff; }
+
+        .elec .left { background-image: url(src/images/app-img-01.jpg); }
+        .iron .left { background-image: url(src/images/app-img-02.jpg); }
+        .oil .left { background-image: url(src/images/app-img-03.jpg); }
+        .car .left { background-image: url(src/images/app-img-04.jpg); }
+        .paper .left { background-image: url(src/images/app-img-05.jpg); }
+        .pure-water .left { background-image: url(src/images/app-img-06.jpg); }
+        .center-air-con .left { background-image: url(src/images/app-img-07.jpg); }
+        .indus .left { background-image: url(src/images/app-img-08.jpg); }
+    </style> 
+</head>
+<body>
+    
+    <div id="applications-div">
+        <my-header></my-header>
+        <!-- <div class="pageTitle row">
+            <div class="shadow"></div>
+            <p class="title">应用领域</p>
+        </div> -->
+
+        <div class="title-img-div"></div>
+        <div class="container clearfix">
+            <div class="left">
+                <product-list></product-list>
+            </div>
+            <div class="right">
+                <p class="content-title">应用领域</p>
+                <div class="content-item elec">
+                    <div class="left">
+                        <div class="layer">
+                            <p>电力工业</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <span class="c-d-title">循环冷却水处理</span>
+                                <span>阻垢缓蚀剂</span><em>|</em><span>杀菌灭藻剂</span><em>|</em><span>粘泥剥离剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">锅炉水处理</span>
+                                <span>除氧剂</span><em>|</em><span>缓蚀剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">凝结水处理</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">锅炉火侧处理</span>
+                                <span>燃煤结焦抑制剂</span><em>|</em><span>脱硫增效剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">海水直流系统</span>
+                                <span>海贝杀生剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">自动加药设备</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">在线监测与控制设备</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-item iron">
+                    <div class="left">
+                        <div class="layer">
+                            <p>钢铁工业</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <span class="c-d-title">高炉、转炉冷却水处理</span>
+                                <span>阻垢缓蚀剂</span><em>|</em><span>杀菌灭藻剂</span><em>|</em><span>粘泥剥离剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">连铸浊环水处理</span>
+                                <span>耐高温阻垢剂</span><em>|</em><span>除油剂</span><em>|</em><span>絮凝剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">冷轧、热轧水处理</span>
+                                <span>阻垢分散剂</span><em>|</em><span>油污清洗剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">焦化废水处理</span>
+                                <span>COD去除剂</span><em>|</em><span>高效脱色剂</span><em>|</em><span>除浊剂</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-item oil">
+                    <div class="left">
+                        <div class="layer">
+                            <p>石油、石化工业</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <span class="c-d-title">采油回注水处理</span>
+                                <span>阻垢缓蚀剂</span><em>|</em><span>杀菌剂</span><em>|</em><span>助凝剂</span><em>|</em><span>破乳剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">冷却水处理</span>
+                                <span>阻垢缓蚀剂</span><em>|</em><span>杀菌灭藻剂</span><em>|</em><span>微生物分散剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">燃油系统</span>
+                                <span>燃油添加剂</span><em>|</em><span>油垢清洗剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">含油废水处理</span>
+                                <span>油水分离剂</span><em>|</em><span>高效脱色剂</span><em>|</em><span>絮凝沉降剂</span><em>|</em><span>分顿处理剂</span><em>|</em><span>高速过滤器</span><em>|</em><span>COD去除剂</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-item car">
+                    <div class="left">
+                        <div class="layer">
+                            <p>汽车工业</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <span class="c-d-title">喷漆水处理</span>
+                                <span>造渣剂</span><em>|</em><span>泡沫抑制剂</span><em>|</em><span>助凝剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">冷却水处理</span>
+                                <span>阻垢缓蚀剂</span><em>|</em><span>杀菌灭藻剂</span><em>|</em><span>微生物分散剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">废水处理</span>
+                                <span>絮凝剂</span><em>|</em><span>污泥脱水剂</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-item paper">
+                    <div class="left">
+                        <div class="layer">
+                            <p>造纸工业</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <span class="c-d-title">杀菌剂系列</span>
+                                <span>纸浆杀菌剂</span><em>|</em><span>纸浆防腐剂</span><em>|</em><span>涂料杀菌剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">消泡剂系列</span>
+                                <span>纸浆消泡剂</span><em>|</em><span>抄纸消泡剂</span><em>|</em><span>涂料消泡剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">助留助滤剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">废水处理</span>
+                                <span>絮凝剂</span><em>|</em><span>高效脱色剂</span><em>|</em><span>污泥脱水剂</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-item pure-water">
+                    <div class="left">
+                        <div class="layer">
+                            <p>纯水系统</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <span class="c-d-title">离子交换树脂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">反渗透设备</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">过滤设备</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">系统维护药剂</span>
+                                <span>RO阻垢剂</span><em>|</em><span>RO杀菌剂</span><em>|</em><span>RO清洗剂</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-item center-air-con">
+                    <div class="left">
+                        <div class="layer">
+                            <p>中央空调系统</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <span class="c-d-title">固体阻垢缓蚀剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">固体杀菌剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">在线监测、控制设备</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">在线清洗</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-item indus">
+                    <div class="left">
+                        <div class="layer">
+                            <p>工业污水</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <span class="c-d-title">絮凝剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">助凝剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">脱色剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">污泥脱水剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">COD去除剂</span>
+                            </li>
+                            <li>
+                                <span class="c-d-title">采矿工业：尾矿水处理剂</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <my-footer></my-footer>
+    </div>
+    <script src="dist/manifest.bundle.js"></script>
+    <script src="dist/vendor.chunk.js"></script>
+    <script src="dist/applications.bundle.js"></script>
+    <!-- <script src="dist/bootstrap.bundle.js"></script> -->
+</body>
+</html>
